@@ -8,7 +8,7 @@ public abstract class AbstractWarrior extends AbstractFighter {
 	@Override
 	public void hit(Fighter fighter) {
 		double damage=getAmountOfDamage();
-		
+		 
 		fighter.consumeDamage(damage);
 	}
 
