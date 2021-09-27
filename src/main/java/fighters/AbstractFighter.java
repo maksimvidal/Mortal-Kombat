@@ -3,23 +3,28 @@ package fighters;
 public abstract class AbstractFighter implements Fighter {
 	
 	protected double health;
-	protected boolean isAlive;
-	protected double amountOfDamage;
-	
-	protected AbstractFighter() {
-		isAlive=true;
-	}
+	protected double attack;
 	
 	@Override
 	public boolean isAlive() {
-		return isAlive;
+		return health<=0?false:true;
 	}
 	
-	public double getHealth() {
+	double getHealth() {
 		return health;
 	}
 	
-	public double getAmountOfDamage() {
-		return amountOfDamage;
+	double hit (AbstractFighter fighter) {
+		fighter.consumeDamage(attack);
+		return attack;
+	}
+	
+	double getAmountOfDamage() {
+		return attack;
+	}
+
+	double consumeDamage(double damage) {
+		health-=damage;
+		return damage;
 	}
 }
