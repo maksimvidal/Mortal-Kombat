@@ -2,8 +2,8 @@ package fighters;
 
 public class Lancer extends Warrior {
 
-	public static final double DEFAULT_ATTACK=6.0;
-	public static final double DEFAULT_HEALTH=50.0;
+	private static final double DEFAULT_ATTACK=6.0;
+	private static final double DEFAULT_HEALTH=50.0;
 	
 	public Lancer() {
 		setHealth(DEFAULT_HEALTH);
