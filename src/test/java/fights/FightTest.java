@@ -4,10 +4,15 @@ import org.junit.jupiter.api.Test;
 
 import fighters.Army;
 import fighters.Battle;
+import fighters.Defender;
 import fighters.Knight;
+import fighters.Vampire;
+import fighters.Warloard;
 import fighters.Warrior;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import javax.swing.DefaultCellEditor;
 
 import org.junit.jupiter.api.DisplayName;
 
@@ -64,6 +69,29 @@ public class FightTest {
 	    
 	    Battle.fight(unit_1, unit_2);
 	    assertFalse(Battle.fight(unit_2, unit_3));
-	}	
+	}
 	
+	@Test
+	void test8() {
+		Defender unit1=new Defender();
+		Warloard unit2=new Warloard();
+		
+		assertFalse(Battle.fight(unit1, unit2));
+	}
+	
+	@Test 
+	void test9(){
+		Warloard unit1=new Warloard();
+		Vampire unit2=new Vampire();
+		
+		assertTrue(Battle.fight(unit1, unit2));
+	}
+	
+	@Test 
+	void test10(){
+		Warloard unit1=new Warloard();
+		Knight unit2=new Knight();
+		
+		assertTrue(Battle.fight(unit1, unit2));
+	}
 }
