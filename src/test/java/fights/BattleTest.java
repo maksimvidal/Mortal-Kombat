@@ -206,4 +206,210 @@ public class BattleTest {
 	    
 	    assertTrue(Battle.fight(army1, army2));
 	}
+	
+	@Test
+	@DisplayName("Battle:15")
+	public void test15() {
+		Army army1=new Army();
+		Army army2=new Army();
+		
+		army1.addUnits(FighterType.LANCER, 5);
+		army1.addUnits(FighterType.VAMPIRE, 3);
+		army1.addUnits(FighterType.WARRIOR, 4);
+		army1.addUnits(FighterType.DEFENDER, 2);
+		army2.addUnits(FighterType.WARRIOR, 4);
+		army2.addUnits(FighterType.DEFENDER, 4);
+		army2.addUnits(FighterType.VAMPIRE, 6);
+		army2.addUnits(FighterType.LANCER, 5);
+	
+	    assertFalse(Battle.fight(army1, army2));
+	}
+	
+	
+	@Test
+	@DisplayName("Battle:16")
+	public void test16() {
+		Army army1=new Army();
+		Army army2=new Army();
+		
+		army1.addUnits(FighterType.LANCER, 7);
+		army1.addUnits(FighterType.VAMPIRE, 3);
+		army1.addUnits(FighterType.WARRIOR, 4);
+		army1.addUnits(FighterType.DEFENDER, 2);
+		army2.addUnits(FighterType.WARRIOR, 4);
+		army2.addUnits(FighterType.DEFENDER, 4);
+		army2.addUnits(FighterType.VAMPIRE, 6);
+		army2.addUnits(FighterType.LANCER, 4);
+	
+	    assertTrue(Battle.fight(army1, army2));
+	}
+	
+	@Test
+	@DisplayName("Battle:17")
+	public void test17() {
+		Army army1=new Army();
+		Army army2=new Army();
+		
+		army1.addUnits(FighterType.LANCER, 7);
+		army1.addUnits(FighterType.VAMPIRE, 3);
+		army1.addUnits(FighterType.HEALER, 1);
+		army1.addUnits(FighterType.WARRIOR, 4);
+		army1.addUnits(FighterType.HEALER, 1);
+		army1.addUnits(FighterType.DEFENDER, 2);
+		army2.addUnits(FighterType.WARRIOR, 4);
+		army2.addUnits(FighterType.DEFENDER, 4);
+		army2.addUnits(FighterType.HEALER, 1);
+		army2.addUnits(FighterType.VAMPIRE, 6);
+		army2.addUnits(FighterType.LANCER, 4);
+	
+	    assertTrue(Battle.fight(army1, army2));
+	}
+	
+	@Test
+	@DisplayName("Battle:18")
+	public void test18() {
+		
+		Army army1=new Army();
+		Army army2=new Army();
+		
+		army1.addUnits(FighterType.LANCER, 1);
+		army1.addUnits(FighterType.WARRIOR, 3);
+		army1.addUnits(FighterType.HEALER, 1);
+		army1.addUnits(FighterType.WARRIOR, 4);
+		army1.addUnits(FighterType.HEALER, 1);
+		army1.addUnits(FighterType.KNIGHT, 2);
+		
+		army2.addUnits(FighterType.WARRIOR, 4);
+		army2.addUnits(FighterType.DEFENDER, 4);
+		army2.addUnits(FighterType.HEALER, 1);
+		army2.addUnits(FighterType.VAMPIRE, 6);
+		army2.addUnits(FighterType.LANCER, 4);
+	
+	    assertFalse(Battle.fight(army1, army2));
+	}
+	
+	@Test
+	@DisplayName("Battle:19")
+	public void test19() {
+		
+		Army army1=new Army();
+		Army army2=new Army();
+		
+		army1.addUnits(FighterType.LANCER, 5);
+		army1.addUnits(FighterType.VAMPIRE, 3);
+		army1.addUnits(FighterType.WARRIOR, 4);
+		army1.addUnits(FighterType.DEFENDER, 2);
+		
+		army2.addUnits(FighterType.WARRIOR, 4);
+		army2.addUnits(FighterType.DEFENDER, 4);
+		army2.addUnits(FighterType.VAMPIRE, 6);
+		army2.addUnits(FighterType.LANCER, 5);
+	
+	    assertFalse(Battle.straightFight(army1, army2));
+	}
+	
+	@Test
+	@DisplayName("Battle:20")
+	public void test20() {
+		
+		Army army1=new Army();
+		Army army2=new Army();
+		
+		army1.addUnits(FighterType.LANCER, 7);
+		army1.addUnits(FighterType.VAMPIRE, 3);
+		army1.addUnits(FighterType.WARRIOR, 4);
+		army1.addUnits(FighterType.DEFENDER, 2);
+		
+		army2.addUnits(FighterType.WARRIOR, 4);
+		army2.addUnits(FighterType.DEFENDER, 4);
+		army2.addUnits(FighterType.VAMPIRE, 6);
+		army2.addUnits(FighterType.LANCER, 4);
+	
+	    assertTrue(Battle.straightFight(army1, army2));
+	}
+	
+	
+	@Test
+	@DisplayName("Battle:21")
+	public void test21() {
+		
+		Army army1=new Army();
+		Army army2=new Army();
+		
+		army1.addUnits(FighterType.LANCER, 7);
+		army1.addUnits(FighterType.VAMPIRE, 3);
+		army1.addUnits(FighterType.HEALER, 1);
+		army1.addUnits(FighterType.WARRIOR, 4);
+		army1.addUnits(FighterType.HEALER, 1);
+		army1.addUnits(FighterType.DEFENDER, 2);
+		
+		army2.addUnits(FighterType.WARRIOR, 4);
+		army2.addUnits(FighterType.DEFENDER, 4);
+		army2.addUnits(FighterType.HEALER, 1);
+		army2.addUnits(FighterType.VAMPIRE, 6);
+		army2.addUnits(FighterType.LANCER, 4);
+	
+	    assertFalse(Battle.straightFight(army1, army2));
+	}
+	
+	@Test
+	@DisplayName("Battle:22")
+	public void test22() {
+		
+		Army army1=new Army();
+		Army army2=new Army();
+		
+		army1.addUnits(FighterType.WARLOARD, 1);
+		army1.addUnits(FighterType.WARLOARD, 2);
+		army1.addUnits(FighterType.LANCER, 2);
+		army1.addUnits(FighterType.HEALER, 2);
+		
+		army2.addUnits(FighterType.WARLOARD, 1);
+		army2.addUnits(FighterType.VAMPIRE, 1);
+		army2.addUnits(FighterType.HEALER, 2);
+		army1.addUnits(FighterType.KNIGHT, 2);
+	
+	    assertTrue(Battle.straightFight(army1, army2));
+	}
+	
+	@Test
+	@DisplayName("Battle:23")
+	public void test23() {
+		
+		Army army1=new Army();
+		Army army2=new Army();
+		
+		army1.addUnits(FighterType.WARLOARD, 1);
+		army1.addUnits(FighterType.WARRIOR, 2);
+		army1.addUnits(FighterType.LANCER, 2);
+		army1.addUnits(FighterType.HEALER, 2);
+		
+		army2.addUnits(FighterType.WARLOARD, 1);
+		army2.addUnits(FighterType.VAMPIRE, 1);
+		army2.addUnits(FighterType.HEALER, 2);
+		army2.addUnits(FighterType.KNIGHT, 2);
+	
+	    assertTrue(Battle.fight(army1, army2));
+	}
+	
+	@Test
+	@DisplayName("Battle:24")
+	public void test24() {
+		
+		Army army1=new Army();
+		Army army2=new Army();
+		
+		army1.addUnits(FighterType.WARRIOR, 2);
+		army1.addUnits(FighterType.LANCER, 2);
+		army1.addUnits(FighterType.DEFENDER, 1);
+		army1.addUnits(FighterType.WARLOARD, 3);
+		
+		army2.addUnits(FighterType.WARLOARD, 2);
+		army2.addUnits(FighterType.VAMPIRE, 1);
+		army2.addUnits(FighterType.HEALER, 5);
+		army2.addUnits(FighterType.KNIGHT, 2);
+	
+	    assertFalse(Battle.fight(army1, army2));
+	}
+	
 }
