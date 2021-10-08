@@ -1,35 +1,42 @@
 package fighters;
 
 public enum FighterType {
-	
-	WARRIOR{
-	public Class<? extends AbstractFighter> getTypeClass() {
-		return Warrior.class;
-	}},
-	KNIGHT{
+
+	WARRIOR {
+		public Class<? extends AbstractFighter> getTypeClass() {
+			return Warrior.class;
+		}
+	},
+	KNIGHT {
 		public Class<? extends AbstractFighter> getTypeClass() {
 			return Knight.class;
-	}},
-	DEFENDER{
+		}
+	},
+	DEFENDER {
 		public Class<? extends AbstractFighter> getTypeClass() {
 			return Defender.class;
-	}},
-	VAMPIRE{
+		}
+	},
+	VAMPIRE {
 		public Class<? extends AbstractFighter> getTypeClass() {
 			return Vampire.class;
-	}},
-	LANCER{
+		}
+	},
+	LANCER {
 		public Class<? extends AbstractFighter> getTypeClass() {
 			return Lancer.class;
-	}},
-    HEALER{
+		}
+	},
+	HEALER {
 		public Class<? extends AbstractFighter> getTypeClass() {
 			return Healer.class;
-	}},
-    WARLOARD{
+		}
+	},
+	WARLORD {
 		public Class<? extends AbstractFighter> getTypeClass() {
-			return Warloard.class;
-	}};
-	
+			return Warlord.class;
+		}
+	};
+
 	public abstract Class<? extends AbstractFighter> getTypeClass();
 }

@@ -9,6 +9,6 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Queue;
 
-public class Army extends AbstractArmy{
-	 
+public class Army extends AbstractArmy {
+
 }
