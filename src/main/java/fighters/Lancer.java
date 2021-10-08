@@ -24,7 +24,7 @@ public class Lancer extends Warrior {
 		double nextDamage = 50 * realDamage / 100.0;
 
 		if (army.hasLivingUnit())
-			nextDamage = army.getNextLivingUnit().consumeDamage(nextDamage);
+			nextDamage = army.getNextLivingUnit().consumeDamage(Math.floor(nextDamage));
 
 		return realDamage + nextDamage;
 	}
