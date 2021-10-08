@@ -2,10 +2,8 @@ package fights;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import fighters.Army;
 import fighters.Battle;
 import fighters.FighterType;
@@ -15,7 +13,7 @@ public class BattleTest {
 
 	@Test
 	@DisplayName("Battle:1")
-	public void test1() {
+	void test1() {
 		Army army1 = new Army();
 		Army army2 = new Army();
 
@@ -26,7 +24,7 @@ public class BattleTest {
 
 	@Test
 	@DisplayName("Battle:2")
-	public void test2() {
+	void test2() {
 		Army army1 = new Army();
 		Army army2 = new Army();
 
@@ -38,7 +36,7 @@ public class BattleTest {
 
 	@Test
 	@DisplayName("Battle:3")
-	public void test3() {
+	void test3() {
 		Army army1 = new Army();
 		Army army2 = new Army();
 
@@ -50,7 +48,7 @@ public class BattleTest {
 
 	@Test
 	@DisplayName("Battle:4")
-	public void test4() {
+	void test4() {
 		Army army1 = new Army();
 		Army army2 = new Army();
 

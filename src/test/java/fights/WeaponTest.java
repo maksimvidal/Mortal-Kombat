@@ -6,7 +6,6 @@ import static org.junit.Assert.assertTrue;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import fighters.AbstractFighter;
 import fighters.Army;
 import fighters.Battle;
 import fighters.Defender;
@@ -26,7 +25,7 @@ import fighters.Weapon;
 public class WeaponTest {
 
 	@Test
-	@DisplayName("Weapon 1")
+	@DisplayName("Weapon:1")
 	void test1() {
 		Warrior unit1 = new Warrior();
 		Vampire unit2 = new Vampire();
@@ -41,7 +40,7 @@ public class WeaponTest {
 	}
 
 	@Test
-	@DisplayName("Weapon 2")
+	@DisplayName("Weapon:2")
 	void test2() {
 		Defender unit1 = new Defender();
 		Lancer unit2 = new Lancer();
@@ -56,7 +55,7 @@ public class WeaponTest {
 	}
 
 	@Test
-	@DisplayName("Weapon 3")
+	@DisplayName("Weapon:3")
 	void test3() {
 		Healer unit1 = new Healer();
 		Knight unit2 = new Knight();
@@ -71,7 +70,7 @@ public class WeaponTest {
 	}
 
 	@Test
-	@DisplayName("Weapon 4")
+	@DisplayName("Weapon:4")
 	void test4() {
 		Defender unit1 = new Defender();
 		Vampire unit2 = new Vampire();
@@ -90,7 +89,7 @@ public class WeaponTest {
 	}
 
 	@Test
-	@DisplayName("Weapon 5")
+	@DisplayName("Weapon:5")
 	void test5() {
 		MagicWand weapon1 = new MagicWand();
 		GreatAxe weapon2 = new GreatAxe();
@@ -112,7 +111,7 @@ public class WeaponTest {
 	}
 
 	@Test
-	@DisplayName("Weapon 6")
+	@DisplayName("Weapon:6")
 	void test6() {
 		Sword weapon1 = new Sword();
 		GreatAxe weapon2 = new GreatAxe();
@@ -134,7 +133,7 @@ public class WeaponTest {
 	}
 
 	@Test
-	@DisplayName("Weapon 7")
+	@DisplayName("Weapon:7")
 	void test7() {
 		Katana weapon1 = new Katana();
 		Shield weapon2 = new Shield();
@@ -155,7 +154,7 @@ public class WeaponTest {
 	}
 
 	@Test
-	@DisplayName("Weapon 8")
+	@DisplayName("Weapon:8")
 	void test8() {
 		Weapon weapon1 = new Weapon(-20, 6, 1, 40, -2);
 		Weapon weapon2 = new Weapon(20, -2, 2, -55, 3);
@@ -178,7 +177,7 @@ public class WeaponTest {
 	}
 
 	@Test
-	@DisplayName("Weapon 9")
+	@DisplayName("Weapon:9")
 	void test9() {
 		Weapon weapon1 = new Weapon(-20, 6, 1, 40, -2);
 		Weapon weapon2 = new Weapon(20, -2, 2, -55, 3);
@@ -196,10 +195,12 @@ public class WeaponTest {
 		enemyArmy.get(0).equipWeapon(weapon1);
 		enemyArmy.get(1).equipWeapon(weapon2);
 		enemyArmy.get(2).equipWeapon(weapon2);
+		
+		assertTrue(Battle.fight(myArmy, enemyArmy));
 	}
 
 	@Test
-	@DisplayName("Weapon 11")
+	@DisplayName("Weapon:11")
 	void test11() {
 		Sword weapon1 = new Sword();
 		GreatAxe weapon2 = new GreatAxe();

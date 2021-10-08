@@ -44,9 +44,8 @@ public abstract class AbstractArmy implements CombatArmy {
 		while (iterator.hasNext()) {
 			fighter = iterator.next();
 			counter++;
-			if (counter == index) {
+			if (counter == index) 
 				break;
-			}
 		}
 
 		return fighter;
